@@ -2,13 +2,13 @@
 
 {% block title %}
 
-    Create Tag - {{ block.super }}
+    Create Post - {{ block.super }}
 
 {% endblock %}
 
 {% block content %}
 
-    <form action= '{% url "tag_create_url"  %}', method = 'post'>
+    <form action= '{% url "post_create_url"  %}', method = 'post'>
         {% csrf_token %}
 
         {% for field in form %}
@@ -30,7 +30,7 @@
         </h1>
 
         <button type="submit" class = "btn btn-primary">
-            Create tag
+            Create post
         </button>
     </form>
 
